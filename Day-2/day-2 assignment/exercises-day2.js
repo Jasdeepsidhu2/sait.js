@@ -113,11 +113,11 @@ console.log('center-y-coordinate ', circle.cy);
 
 //10. Create an array `shapes` that represents a list of shapes. The array should contain the rectangle and the circle objects defined above.
 
-var shapes= [
-    {cx: 34, cy:43, radius: numbers[numbers.sort().length-1] },
-    {x: 30, y:50, width:100, height:50 }
-]
-
+// var shapes= [
+//     {cx: 34, cy:43, radius: numbers[numbers.sort().length-1] },
+//     {x: 30, y:50, width:100, height:50 }
+// ]
+var shapes= [rect,circle];
 
 //console.log the variable. Be sure to inspect it in the developer console!
 console.log(shapes);
