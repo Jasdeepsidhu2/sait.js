@@ -3,22 +3,24 @@
 // *****Detect the geolocation feature and add elemnets*********
 var pageBody=document.getElementsByTagName('body')[0];
 
+
+var image=document.createElement('img');
+
 if(Modernizr.geolocation) {  
     //  if (typeof Modernizr.geolocation!='undefined') {
-
+    image.src='http://www.placepuppy.net/400/250';
     console.log('Very good');
  } 
  
  else {
 
-        var pageBody=document.getElementsByTagName('body')[0];
-        var image=document.createElement('img');
+       
         image.src='http://www.placepuppy.net/400/250';
-        pageBody.appendChild(image);
+      
      alert("The geolocation is not supported by your browser");
   }
 
-
+  pageBody.appendChild(image);
 
 
 
