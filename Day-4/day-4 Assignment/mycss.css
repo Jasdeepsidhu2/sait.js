@@ -13,6 +13,7 @@ h1{
 }
 .main{
     height: 600px;
+    position: relative;
     background-color: lightcoral;
 
 }
@@ -38,5 +39,13 @@ position: relative;
     background-color: lightcoral;
     border: none;
 
+
+}
+#tweet
+{
+    position: absolute;
+    bottom:20px;
+    left: 20px;
+    /* align-content: center; */
 
 }
