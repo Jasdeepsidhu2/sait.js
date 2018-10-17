@@ -39,14 +39,24 @@ setInterval(catWalk,50);  */
 
 
 
-// **********Modified code**************
+// **********Modified code  and local storage   **************
 
 var direction='forward';
+console.log('local  ', localStorage.catLocation);
+
+    // var img =document.getElementById('cat');
+    //    img.style.left=currentLeft;
+     var currentLeft=parseInt(localStorage.catLocation);
+
 function catWalk()
 
 {
     var img =document.getElementById('cat');
-     var currentLeft=parseInt(img.style.left);
+    //  var currentLeft=parseInt(img.style.left);
+
+    
+
+     console.log('storage is   ', currentLeft);
     
 
     if((direction==='forward')&&(currentLeft < (window.innerWidth - img.width)))
@@ -72,10 +82,11 @@ function catWalk()
     {
         img.style.left=(currentLeft - 10) + 'px';
     }
-
+    currentLeft=parseInt(img.style.left);
+    localStorage.catLocation=currentLeft;
 
 
 }
 // catWalk();
 
-setInterval(catWalk,50);  
+setInterval(catWalk,150);  
