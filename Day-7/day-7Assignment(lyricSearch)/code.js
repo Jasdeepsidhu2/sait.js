@@ -69,12 +69,13 @@ button.addEventListener('click' ,function(e){
                     if(artist===videos[i].artist)
                     {
                     
+
                         var thumbnailURL = youtube.generateThumbnailUrl(videos[i].youtubeId);
                         videoThumb.src = thumbnailURL;
                         link.appendChild(videoThumb);
                         videoEmbed.src = youtube.generateEmbedUrl(videos[i].youtubeId); 
                         // console.log('Data is ' ,videoEmbed.src , );
-                        video.innerHTML = ''; 
+          video.innerHTML = ''; 
                         video.appendChild(videoEmbed);
                     }
 

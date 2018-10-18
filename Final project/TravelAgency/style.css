@@ -1,0 +1,71 @@
+
+/* ********Travel agency****** */
+
+.wrapper{
+
+    /* margin: 0,auto; */
+    /* max-width: 1500px; */
+    /* width: 95%; */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* ********header********** */
+header{
+    height: 100px;
+    /* width:  */
+    display: flex;
+    justify-content: space-around;
+    /* background: linear-gradient(90deg, #0174d3,#ffc80042); */
+    background:#549ae0;
+}
+.logo{
+    
+    
+    color: #919f08;
+    padding-top: 25px;
+}
+.links{
+    width: 40%;
+    /* background-color: red; */
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: aliceblue;
+    font-size: 1.3em;
+
+}
+
+/* *********Hero*********** */
+.hero{
+    height: 600px;
+    background:url('./images/hero3.jpg') ;
+    background-position: center;
+    background-size:cover  ;
+
+}
+
+
+
+/* *****main ********** */
+.main{
+    height: 400px;
+    background-color:pink;
+
+}
+
+/* *******Footer******** */
+footer{
+    height: 100px;
+    text-align: center;
+    
+    background-color: grey;
+}
+h1{
+    /* background-color: blue; */
+    margin: 0;
+}
+

@@ -2,7 +2,7 @@
 // ********* Quote Machine*************
 
 var quote1={
-    description:'Very little is needed to make a happy life; it is all within yourself, in your way of thinking.',
+    description:'Very little is needed to make a happy life it is all within yourself, in your way of thinking.',
     author:'--Marcus Aurelius'
 };
 
@@ -53,12 +53,12 @@ function change(event){
        i=0;
     }
       
-     
+     console.log("a is ", a.textContent);
 
 }
 
 change();
-
+setInterval(change,3000);
 
 
 
@@ -108,8 +108,9 @@ var index=quotes.findIndex(function(element){return element.author===a.textConte
 
 
 var link=document.getElementById('tweet');
- link.href="https://twitter.com/intent/tweet?text= " +  quotes[index].description + quotes[index].author;
+ var href="https://twitter.com/intent/tweet?text= " +  quotes[index].description + quotes[index].author;
+ link.href=href;
 
+console.log(href);
 
-
- setInterval(change,3000);
+ 
