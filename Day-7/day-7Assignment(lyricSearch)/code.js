@@ -33,15 +33,22 @@ var videos = [
       
   
   ];
-  
+  var currentVideo;
 
 button.addEventListener('click' ,function(e){
     e.preventDefault();
     link.innerHTML='';
     var artist= document.getElementById('artist').value;
     var song=document.getElementById('song').value;
-    console.log('Artist is   ', artist);
-    console.log('Song is   ',song);
+    // console.log('Artist is   ', artist);
+    // console.log('Song is   ',song);
+    var videoEmbed = document.createElement('iframe');
+    videoEmbed.width = 860; 
+    videoEmbed.height = 315
+    var videoThumb = document.createElement('img');
+    var video=document.getElementById('video');
+
+
     fetch('https://api.lyrics.ovh/v1/'+ artist+"/"+ song)
     
     .then(function(response){
@@ -51,29 +58,41 @@ button.addEventListener('click' ,function(e){
 
     .then(function(data){
 
-        
-        var videoThumb = document.createElement('img')
-        
-        for (var i=0;i<videos.length;i++)
-        {
-           
-            if(artist===videos[i].artist)
-            {
-               
-                var videoTitle = document.createTextNode(videos[i].title);
-                var thumbnailURL = youtube.generateThumbnailUrl(videos[i].youtubeId);
-                videoThumb.src = thumbnailURL;
-                console.log('video artist is  ',videos[i].artist,videoTitle,thumbnailURL,link  );
-                link.appendChild(videoThumb);
-       
-                // console.log('Data is ' ,data, );
-                lyrics.innerHTML=data.lyrics;
-                // lyrics.appendChild(data.lyrics);
-            }
-        }
+        lyrics.innerHTML=data.lyrics;
 
-    })
+        if(data.lyrics)
+        {
+                
+                for (var i=0;i<videos.length;i++)
+                {
+                
+                    if(artist===videos[i].artist)
+                    {
+                    
+                        var videoTitle = document.createTextNode(videos[i].title);
+                        var thumbnailURL = youtube.generateThumbnailUrl(videos[i].youtubeId);
+                        videoThumb.src = thumbnailURL;
+                    
+                        link.appendChild(videoThumb);
+                        // lyrics.appendChild(data.lyrics);
+                        currentVideo=videos[i];
+                        videoEmbed.src = youtube.generateEmbedUrl(videos[i].youtubeId); 
+                        console.log('Data is ' ,videoEmbed.src , );
+                        video.innerHTML = ''; 
+                        video.appendChild(videoEmbed);
+                    }
+
+
+
+                }
+            
+        }
+            })
 })
+
+
+
+
 
 
 
