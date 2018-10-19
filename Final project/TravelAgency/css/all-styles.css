@@ -6,32 +6,28 @@
 .wrapper{
 
     margin: 0 auto;
-    /* max-width: 1500px; */
-    width: 95%;
 }
 
+    
 * {
     box-sizing: border-box;
 }
 
 /* ********header********** */
-header{
+.desktop-menu{
     height: 100px;
-    /* width:  */
     display: flex;
     justify-content: space-around;
-    /* background: linear-gradient(90deg, #0174d3,#ffc80042); */
     background:#549ae0;
 }
 .logo{
-    
-    
     color: #919f08;
     padding-top: 25px;
 }
+.menu{
+      width: 50%;
+}
 .links{
-    width: 40%;
-    /* background-color: red; */
     list-style: none;
     display: flex;
     justify-content: space-around;
@@ -40,18 +36,87 @@ header{
     font-size: 1.3em;
 
 }
+desktop-menu{
+    display: block;
 
-/* *********Hero/main page*********** */
-.hero{
-    height: 600px;
-    background: url('./images/hero3.jpg') no-repeat;
-    background-position: center;
-    background-size:contain ;
+}
+.mobile-menu{
+    display: block;
+}
+
+.hamburger-button{
+
+    display: none;
+    border: none;
+    color: white;
+    background: transparent;
+   
+
+}
+.mobile-container{
+    width: 400px;
+    height: 300px;
+    background: #549ae0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    transform: translateX(-400px);
+    
+}
+.mobile-container.open {
+    transform: translateX(0px);
+}
+
+.mobile-container li{
+
+        margin: 10px;
+        padding: 10px;
+        border-bottom: 1px solid white;
+
 
 }
 
+@media screen and  (max-width:750px)
+{
+    
+    .hamburger-button{
+        display: block;
+    }
+    .logo  {
+        position: absolute;
+        left: 10px;
+        margin: auto;
+     }
+    #log{
+        display: none;
+    }
+    .menu{
+        display: none;
+    }
+    
+   
+   .mobile-menu{
+       display: block;
+   }
+}
 
 
+/* *********Hero/main page*********** */
+
+
+.hero{
+    height: 600px;
+    background:#549ae0 url('./images/hero3.jpg') no-repeat;
+    background-position: center;
+    background-size:contain ;
+  
+}
+.hero > img{
+    width: 12%;
+    height: 10%;
+   
+}
 
 /* *****main section /home page  ********** */
 .main{
@@ -59,6 +124,7 @@ header{
     background-color:pink;
 
 }
+
 
 /* **********contact page************** */
 
@@ -70,36 +136,29 @@ header{
     background-size: cover;
     display: flex;
     flex-direction: column;
-    /* align-content: center; */
     justify-content: center;
     align-items: center;
-    /* background-position: center; */
-
-
-
+    
 }
 .hero-content{
     color: white;
     width: 70%;
-    /* height: 50%; */
     text-align:center;
-    /* background: red; */
+   
 }
 
 .contact-main{
     text-align: center;
     height: 300px;
-    /* width: 50%; */
     background: wheat;
 }
 #nameList{
     list-style: none;
-    /* margin: 40px; */
-    /* background: red; */
+   
 }
 .listItem{
     padding: 10px;
-    /* width: 500px; */
+   
     
 }
 
@@ -110,11 +169,10 @@ header{
     height: 300px;
     background: linear-gradient(
         rgba(10, 10, 10,0.80 ),
-         rgba(23, 21, 21,0.80)),  url('./images/vac.jpg') ;
+         rgba(23, 21, 21,0.80)),  url('./images/package1.jpg') ;
     background-size: contain;
     display: flex;
     flex-direction: column;
-    /* align-content: center; */
     justify-content: center;
     align-items: center;
     background-position: center;
@@ -125,12 +183,10 @@ header{
 .package-content{
     color: white;
     width: 70%;
-    /* height: 50%; */
     text-align:center;
-    /* background: red; */
+   
 }
 .package-main{
-    /* text-align: center; */
     height: 700px;
     display: flex;
     flex-wrap: wrap;
@@ -143,15 +199,54 @@ width: 48%;
 background:#c4daf1;
 margin: 8px;
 padding: 20px;
-/* margin-right: 10px;
-margin-top: 10px; */
+}
+
+/* ************Register page******* */
+
+
+
+.register-hero{
+    height: 300px;
+    background: linear-gradient(
+        rgba(10, 10, 10,0.80 ),
+         rgba(23, 21, 21,0.80)),  url('./images/register.jpg') ;
+    background-size:cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    color: white;
+
+
+}
+.register-main{
+      text-align: center;
+
+}
+#userform{
+    border: solid 1px black;
+    padding: 10px;
+  
+}
+.box{
+    width:200px;
+    
+
 }
 
 
+
+
 /* *******Footer******** */
+
 footer{
-    height: 100px;
+    padding: 30px;
+    height: 80px;
     text-align: center;
-    
-    background-color: grey;
+    background-color: #549ae0;
+}
+footer h3{
+    margin: 0;
+
 }

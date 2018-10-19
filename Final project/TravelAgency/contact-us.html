@@ -10,15 +10,41 @@
     <link rel="stylesheet" href="./css/all-styles.css">
 </head>
 <body class='wrapper'>
-<header>
-    <div class="logo"><i class="fas fa-globe-africa fa-3x"></i></div>
-    <ul class="links">
-        <li>Home</li>
-        <li>Contact Us</li>
-        <li>Vacation Package</li>
-    </ul>
-</header>
-
+        <header>
+                <div class="desktop-menu">
+                                
+                        <div class="logo"><i id= 'log' class="fas fa-globe-africa fa-3x"></i>
+                            <button class="hamburger-button" id="open-button">
+                                    <i class="fas fa-bars fa-lg"></i>
+                            </button>
+                        </div>
+                        <div class="menu">
+                                <ul class="links">
+                                    <li><a href="./index.html">Home</a></li>
+                                    <li><a href="./contact-us.html">Contact Us</a></li>
+                                    <li><a href="./vacation-package.html">Vacation Package</a></li>
+                                    <li><a href="./register.html">Register Today!!!</a></li>
+                                </ul>
+                        </div>
+                </div>
+        <div class="mobile-menu">
+                
+            <div class='mobile-container' id='mobile-container'>
+                    <ul>
+                        <button id="close"><i class="fas fa-times fa-lg"></i></button>
+                        <li><a href="./index.html">Home</a></li>
+                                    <li><a href="./contact-us.html">Contact Us</a></li>
+                                    <li><a href="./vacation-package.html">Vacation Package</a></li>
+                                    <li><a href="./register.html">Register Today!!!</a></li>
+                    </ul>
+                </div>
+        
+            
+        
+        
+        </div>
+        
+        </header>
 <div class="contact-hero"> 
     <div class="hero-content">
         <h1 >Find a specialist</h1>
@@ -40,7 +66,7 @@
 </footer>
 
 
-
+    <script src="./js/mobile.js"></script>
     <script src="./js/contact.js"></script>
     <script src="./js/footer.js"></script>
 </body>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register Today</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/all-styles.css">
+</head>
+<body class='wrapper'>
+        <header>
+                <div class="desktop-menu">
+                                
+                        <div class="logo"><i id= 'log' class="fas fa-globe-africa fa-3x"></i>
+                            <button class="hamburger-button" id="open-button">
+                                    <i class="fas fa-bars fa-lg"></i>
+                            </button>
+                        </div>
+                        <div class="menu">
+                                <ul class="links">
+                                    <li><a href="./index.html">Home</a></li>
+                                    <li><a href="./contact-us.html">Contact Us</a></li>
+                                    <li><a href="./vacation-package.html">Vacation Package</a></li>
+                                    <li><a href="./register.html">Register Today!!!</a></li>
+                                </ul>
+                        </div>
+                </div>
+        <div class="mobile-menu">
+                
+            <div class='mobile-container' id='mobile-container'>
+                    <ul>
+                        <button id="close"><i class="fas fa-times fa-lg"></i></button>
+                        <li><a href="./index.html">Home</a></li>
+                                    <li><a href="./contact-us.html">Contact Us</a></li>
+                                    <li><a href="./vacation-package.html">Vacation Package</a></li>
+                                    <li><a href="./register.html">Register Today!!!</a></li>
+                    </ul>
+                </div>
+        
+            
+        
+        
+        </div>
+        
+        </header>
+<div class="register-hero">
+        <h1 >Register Today!!!</h1>
+</div>
+<div class="register-main">
+    <h2>Registration</h2>
+
+        <form id='userform' action="" name="myform">
+                            <label for="name"> Name</label>
+                            <input class="box" type="text" id="name"  name="name" required ><br><br>
+                        
+                        <label for="address" >Address</label>
+                            <input class="box" type='text' name='address' required ><br><br>
+                        <label for="city" >City</label>
+                            <input class="box"type='text' name='city' required ><br><br>
+                        <label for="province" >Province</label>
+                            <input class="box" type='text' name='province' required ><br><br>
+                        <label for="postal" >Postal Code</label>
+                            <input class="box" type='text' name='postal' pattern='[A-Za-z][0-9][A-Za-z][ -][0-9][A-Za-z][0-9]' placeholder='e.g T3J 0L1 or T3J-0L1 'required ><br><br>
+                        <label for="email" >Email</label>
+                            <input  class="box" type='email' name='email'  placeholder='example@gmail.com' required ><br><br>
+                        <label for="phonenumber ">Phone Number</label>
+                            <input  class="box" type='number' name='phonenumber' placeholder="xxx-xxx-xxxx"  ><br><br>
+                                            
+                                    
+                        
+                
+                        <input type="submit" name="submit" value="Submit">
+                
+                
+                
+                
+                
+                
+                    </form>
+                
+                
+
+
+
+
+
+</div>
+<footer >
+    <h3 id="siteFooter"></h3>
+</footer>
+
+    <script src="./js/mobile.js"></script>
+    <script src="./js/regiter.js"></script>
+    <script src="./js/footer.js"></script>
+</body>
+</html>
